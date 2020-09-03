@@ -1,0 +1,6 @@
+@bowl -deploy (
+	air.deploy.data >> %cd%/%path%/%file%;
+	air.air(%a);
+	air.fetch(delay: 1);
+	air.web.BowlHtml >> index.bat
+)
