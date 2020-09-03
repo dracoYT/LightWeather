@@ -1,0 +1,75 @@
+@!bowl -OnLoad -> [%bowl
+
+#mata(
+	web.title >> meta("p_name") =>> 'Light Weather';
+	web.descrption >> meta("p_description") =>> 'LightWeather Page on Bowl ^(Place-holder)^';
+	web.bootstrap.reactive >> meta(e_mov) == tg();
+	web.react(react@lasted) >> meta('react');
+	web.batch.terminal >> output >>> con.node(//) ==> '${{p_name}} is working... Description: ${{p_description}}, React version: ${{react}}'
+);
+
+#contnent(
+
+:!def = o/;
+	web.div == div;
+
+	web.text == text;
+
+	web.input == input;
+
+	web.form == form;
+
+	web.hyperlink == h_text;
+:!def = o/;
+	/=====================================|
+	command.bowl(
+ 		%o+(%a%v%i*"\x"%i%v%b)+{deplaceement--condition.override}%b+{^args:^%a%s%t%o%p}%b
+		):	
+	/=====================================|
+:!body = bdy/;
+div id:'head', contnent -> (
+	div id:'nav-bar', contnent -> (
+			gh == 'contnent.bowl:github.com'
+			gh == 'contnent.bowl:#how-it-works'
+			gh == 'contnent.bowl:#documentation'
+			gh == 'contnent.bowl:github.com'
+
+
+
+
+		div id:'button-div', class:'n-var-button', name:'gh', contnent -> (
+			txt:^^github ${{github_logo_ext}}^^
+
+			)
+		div id:'button-div', class:'n-var-button', name:'hiw' contnent -> (
+			txt:^^How it works?^^
+
+			)
+		div id:'button-div', class:'n-var-button', name:'dcm' contnent -> (
+			txt:^^Docs^^
+
+			)
+		div id:'button-div', class:'n-var-button', name:'abou' contnent -> (
+			txt:^^About^^
+
+			)
+
+
+		)
+
+
+
+
+	)
+
+
+
+)
+
+#de-echo(
+
+
+)
+
+
+%]
